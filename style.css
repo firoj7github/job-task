@@ -133,7 +133,7 @@ body {
     width: 60px;
     height: 1px;
     background-color:#8D17EA;
-    margin-left: 151px;
+    margin-left: 152px;
     margin-top: -10px;
   }
   .line-show{
@@ -142,6 +142,33 @@ body {
     background-color: #666;
     opacity: 50%;
   }
+  .file-all{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+  }
+  .file-1{
+    width: 100px;
+    height: 70px;
+    border: dashed;
+  }
+  .file-2{
+    width: 100px;
+    height: 70px;
+    border: dashed;
+  }
+  .file-3{
+    width: 100px;
+    height: 70px;
+    border: dashed;
+  }
+  .fa-solid{
+    color: rgb(182, 177, 177);
+    margin-top: 22px;
+    margin-left: 35px;
+  }
+
+ 
   @keyframes animate {
     from {
       transform: scale(1, 0);
