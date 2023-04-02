@@ -11,60 +11,101 @@
 <body>
 
     <form action="#" class="form">
+   <div class="part">
+    <p class="part-1">Account Setup</p>
+      <p>Social Profile</p>
+      <p>Personal Details</p>
+   </div>
+      
        
         <!-- Progress bar -->
         <div class="progressbar">
           <div class="progress" id="progress"></div>
-          
+         
           <div
-            class="progress-step progress-step-active"
-            data-title="Intro"
-          ></div>
-          <div class="progress-step" data-title="Contact"></div>
+            class="progress-step progress-step-active">
+          </div>
+          <div class="progress-step"></div>
           
-          <div class="progress-step" data-title="Password"></div>
+          <div class="progress-step"></div>
         </div>
             <div class="line-show"></div>
 
         <!-- upload media -->
-
-        <h4 class="upload-title">Uplaod Media</h4>
-        <div class="line"></div>
-
-        <div class="file-all">
-          <div class="file-1">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-          </div>
-          <div class="file-2">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-          </div>
-          <div class="file-3">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-          </div>
+        <div class="upload-step upload-step-active">
+          <p class="upload-title-1">Choose verification option</p>
+          <div class="line"></div>
         </div>
+        <div class="upload-step">
+          <h4 class="upload-title">Uplaod Media</h4>
+          <div class="line"></div>
+  
+          <div class="file-all">
+            <div class="file-1">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div class="file-2">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div class="file-3">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+          </div>
+          
+        </div>
+        <div class="upload-step">
+          <p class="upload-title-3">Personal Information</p>
+          <div class="line"></div>
+          
+        </div>
+
+       
         <!-- Steps -->
         <div class="form-step form-step-active">
           <div class="input-group">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" />
+            <label for="username">Select Region</label>
+            <select class="select-style">
+              <option>USA</option>
+              <option>CANADA</option>
+              <option>AUSHTILA</option>
+            </select>
           </div>
           <div class="input-group">
-            <label for="position">Position</label>
-            <input type="text" name="position" id="position" />
-          </div>
-          <div class="">
-            <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+            <label for="username">Select Identy Type</label>
+            <section class="radio-section">
+
+              <div class="radio-list">
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio1">
+                    
+                      <label for="radio1">National Id</label>
+                  </div>
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio2">
+                      <label for="radio2">Passport</label>
+                  </div>
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio3">
+                      <label for="radio3">Driving Licene</label>
+                  </div>
+                  
+              </div>
+          </section>
+            </div>
+            <div class="">
+              <a href="#" class="btn-size btn-next width-50 ml-auto">Next</a>
+              
+            </div>
+            </div>
+         
             
-          </div>
-        </div>
+            
+         
         <div class="form-step">
+          
           <div class="input-group">
-            <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" />
-          </div>
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <label for="email">Enter Nid Number</label>
+            <input type="text" placeholder="eg. 37508956" />
           </div>
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
@@ -74,17 +115,18 @@
         
         <div class="form-step">
           <div class="input-group">
+            <label for="password">Full Name</label>
+            <input type="text" />
+          </div>
+          <div class="input-group">
+            <label for="password">Phone Number</label>
+            <input type="text"/>
+          </div>
+          <div class="input-group">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" />
           </div>
-          <div class="input-group">
-            <label for="confirmPassword">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-            />
-          </div>
+          
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
             <input type="submit" value="Submit" class="btn" />

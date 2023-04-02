@@ -26,12 +26,32 @@ body {
     margin-bottom: 0.5rem;
     color: white;
   }
+  .part{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  .part-1{
+    margin-left: -5px;
+   
+  }
   
   input {
     display: block;
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
+    background-color: 
+    #5968B1;
+    border-radius: 0.25rem;
+    
+  }
+  .select-style{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    background-color: 
+    #5968B1;
     border-radius: 0.25rem;
   }
   
@@ -53,8 +73,9 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-   
-    margin: 2rem 0 4rem;
+    width: 80%;
+    margin: 7px 0 64px;
+    margin-left: 33px;
   }
   
   .progressbar::before,
@@ -76,14 +97,20 @@ body {
   }
   
   .progress-step {
-    width: 2.1875rem;
-    height: 2.1875rem;
+    width: 	35px;
+    height: 35px;
     background-color: #dcdcdc;
+    color: white;
     border-radius: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
+   
+  }
+  .progress-step p{
+    margin-top: -15px;
+   width: 300px;
   }
   
   
@@ -108,7 +135,7 @@ body {
     margin: 0 auto;
     
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 18px;
     background-color: #0F1A53;
   }
   
@@ -121,6 +148,13 @@ body {
   .form-step-active {
     display: block;
   }
+  .upload-step{
+    display: none;
+   
+  }
+  .upload-step-active{
+    display: block;
+  }
   
   .input-group {
     margin: 2rem 0;
@@ -129,18 +163,30 @@ body {
     text-align: center;
     color: white;
   }
+  
+  .upload-title-1{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+  .upload-title-3{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
   .line{
     width: 60px;
     height: 1px;
     background-color:#8D17EA;
-    margin-left: 152px;
-    margin-top: -10px;
+    margin-left: 160px;
+    margin-top: -11px;
   }
   .line-show{
     width: 368px;
     height: 1px;
     background-color: #666;
     opacity: 50%;
+    margin-top: -25px;
   }
   .file-all{
     display: grid;
@@ -168,6 +214,115 @@ body {
     margin-left: 35px;
   }
 
+  /* radio button */
+  a {
+    text-decoration: none;
+   }
+  ul {
+    list-style-type: none;
+  }
+
+.radio-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.radio-item [type="radio"]{
+    display: none;
+}
+
+.radio-item + .radio-item{
+    margin-top: 2px;
+}
+.radio-item label{
+    display: block;
+    padding: 20px 60px;
+    background: #1d1d42;
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 250px;
+    white-space: nowrap;
+    position: relative;
+}
+.radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after{
+    height: 20px;
+    width: 20px;
+    border:2px solid #524eee;
+    left: 20px;
+    top: calc(50% - 12px);
+}
+.radio-item label:before{
+    background: #524eee;
+    height: 10px;
+    width: 10px;
+    left: 27px;
+    top: calc(50% - 5px);
+    transform: scale(5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-item [type="radio"]:checked ~ label{
+    border-color: #524eee;
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.radio-section{
+  margin-top: -180px;
+  margin-left: -115px;
+}
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+ 
+  background-color:#8D17EA;
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+.btn-size {
+  padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+   
+    background-color:#8D17EA;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  margin-top: -195px;
+}
+
+
  
   @keyframes animate {
     from {
@@ -180,25 +335,4 @@ body {
     }
   }
   
-  /* Button */
-  .btns-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
   
-  .btn {
-    padding: 0.75rem;
-    display: block;
-    text-decoration: none;
-   
-    background-color:#8D17EA;
-    color: #f3f3f3;
-    text-align: center;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .btn:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
-  }
